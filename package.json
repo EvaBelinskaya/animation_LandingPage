@@ -1,14 +1,21 @@
-{
+ {
   "name": "animation_2",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@react-three/drei": "^4.1.8",
+    "@react-three/fiber": "^6.0.14",
+    "@react-three/postprocessing": "^2.0.3",
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
+    "postprocessing": "^6.21.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
+    "three": "^0.127.0",
+    "threejs-meshline": "^2.0.12",
+    "zustand": "^3.4.1",
     "web-vitals": "^1.1.1"
   },
   "scripts": {
