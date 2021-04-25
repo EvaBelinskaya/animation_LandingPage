@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Layer } from "./layer.js";
 import { getSeasonTextures } from "./texturePicker.js";
@@ -23,11 +23,13 @@ export function AnimationLandingPage() {
 
     return (
         <Canvas linear orthographic gl={glParams} camera={cameraParams}>
-            <Layer key={0} z={0} texture={textures[0]} factor={1} />
-            <Layer key={1} z={10} texture={textures[1]} factor={1} />
-            <Layer key={2} z={20} texture={textures[2]} factor={1} />
-            <Layer key={3} z={30} texture={textures[3]} factor={0} />
-            <Layer key={4} z={40} texture={textures[4]} factor={1} />
+            <Suspense fallback={null}>
+            <Layer key={0} z={0} texture={textures[0]} factor={0} />
+            <Layer key={1} z={10} texture={textures[1]} factor={0.5} />
+            <Layer key={2} z={20} texture={textures[2]} factor={0.7} />
+            <Layer key={3} z={30} texture={textures[3]} factor={0.4} />
+            <Layer key={4} z={40} texture={textures[4]} factor={0} />
+            </Suspense>
         </Canvas>
     );
 }
